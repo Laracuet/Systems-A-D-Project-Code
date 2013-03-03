@@ -59,6 +59,9 @@ body {
 }
 
 #addButton {
-		background-image: url('plus-button.png') no-repeat; 
-        border: none;
+        position: relative;
+        left: 50px; 
+        font-size: 115%; 
 }
+
+
