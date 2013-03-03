@@ -1,0 +1,64 @@
+										/* MAIN */ 
+
+body {
+		background-color: #211C1C;	
+		font-family: Arial; 	
+}
+
+#foreground {
+		background-color: white; 
+		margin-left: 150px; 
+		margin-right: 150px; 
+		margin-bottom: 100px; 
+		margin-top:0; 
+		position: relative; 
+		height: 1000px;
+}
+
+#header {
+		background-color: #E7701A; 
+		margin-left: 25px; 
+		margin-right: 25px; 
+		margin-top: 0; 
+		height:40px; 
+		-moz-border-bottom-right-radius: 15px; 
+		border-bottom-right-radius: 15px; 
+		-moz-border-bottom-left-radius: 15px; 
+		border-bottom-left-radius: 15px; 
+}
+
+#logo {
+		margin-left: 25px; 
+		margin-top: 15px;
+}
+
+#topNav {
+		height: 65px; 
+		width: 580px; 
+		position: relative; 
+		left: 325px; 
+		bottom: 67px; 
+		background-color: #007EB0; 
+		-moz-border-radius: 15px; 
+		border-radius: 15px;
+}
+
+#crossBar {
+		border-top: 1px solid black; 
+		width: 875px; 
+		height: 20px; 
+		position: relative; 
+		bottom: 40px; 
+		background-color: #4C4D4F; 
+		-moz-border-radius: 15px; 
+		border-radius: 15px; 
+}
+
+#dynamicInput {
+		margin-left: 50px;	
+}
+
+#addButton {
+		background-image: url('/Systems A&D/plus-button.png') no-repeat; 
+        border: none;
+}

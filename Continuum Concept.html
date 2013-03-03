@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<link 
+			rel="stylesheet"
+			type="text/css"
+			href="ContinuumStyleMain.css"
+/>
+<head>
+</head>
+<body>
+	<div id="foreground">
+		<div id="header">
+		</div>
+		<img src="Continuum Logo.gif" alt="Continuum Managed Services" id="logo"/>
+		<div id="topNav">
+		</div> 
+		<center>
+		<div id="crossBar">
+		</div>
+		</center>
+		<script src="addInput.js" language="Javascript" type="text/javascript"></script>
+			<form method="POST">
+     			<div id="dynamicInput">
+          				Account #1 <br><input type="text" name="myInputs[]">
+     			</div>
+    		<input id="addButton" type="button" value="Add Account" onClick="addInput('dynamicInput');">
+</form>
+	</div>
+</body>
+</html>
