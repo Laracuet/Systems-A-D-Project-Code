@@ -10,4 +10,9 @@ function addInput(divName){
     	document.getElementById(divName).appendChild(newdiv);
         counter++;
      }
+     var testDiv = document.createElement('div'); 
+     /*for(var i=0;i<dropDown.length;i++){
+		document.write("<b>dropDown["+i+"] is </b>=>"+dropDown[i]+"<br>");
+	 } 
+	 document.getElementById(divName).appendChild(testDiv); */
 }
