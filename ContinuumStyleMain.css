@@ -31,6 +31,16 @@ body {
 		margin-left: 25px; 
 		margin-top: 15px;
 }
+#crossBar {
+		border-top: 1px solid black; 
+		width: 875px; 
+		height: 20px; 
+		position: relative; 
+		bottom: 40px; 
+		background-color: #4C4D4F; 
+		-moz-border-radius: 15px; 
+		border-radius: 15px; 
+}
 
 									/* TOP NAV */
 #topNav {
@@ -80,28 +90,6 @@ body {
 		left: 420px;
 		
 }
-
-#crossBar {
-		border-top: 1px solid black; 
-		width: 875px; 
-		height: 20px; 
-		position: relative; 
-		bottom: 40px; 
-		background-color: #4C4D4F; 
-		-moz-border-radius: 15px; 
-		border-radius: 15px; 
-}
-
-#dynamicInput {
-		margin-left: 50px;	
-}
-
-#addButton {
-        position: relative;
-        left: 50px; 
-        font-size: 115%; 
-}
-
 
 
 
