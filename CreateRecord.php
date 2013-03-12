@@ -6,7 +6,6 @@
 			href="ContinuumStyleMain.css"
 />
 <head>
-	/* Test */ 
 </head>
 <body>
 	<div id="foreground">
