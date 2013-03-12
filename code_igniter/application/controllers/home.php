@@ -19,7 +19,17 @@ class Home extends MY_Controller {
 	 */
 	public function index()
 	{
-		$this->makePage('home');
+		if($this->input->server('REQUEST_METHOD') == 'POST'){
+			$this->login();
+			redirect(site_url('launchpad'));
+		}
+		$this->load->view('homepage/header');
+		$this->load->view('homepage/home');
+		$this->load->view('homepage/footer');
+	}
+	
+	private function login(){
+		$this->session->set_userdata('loggedIn',TRUE);
 	}
 }
 /* End of file welcome.php */
