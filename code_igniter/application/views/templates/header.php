@@ -13,16 +13,16 @@
 		</div>
 		<img src="/theme/img/Continuum Logo.gif" alt="Continuum Managed Services" id="logo"/>
 		<div id="topNav">
-		<form method="link" action="ViewRecords.php">
+		<form method="link" action="ViewRecords.html">
 				<input type="submit" value="View Records" class="topNavButton" id="viewButton">
 			</form>
-			<form method="link" action="CreateRecord.php">
+			<form method="link" action="CreateRecord.html">
 				<input type="submit" value="Create Record" class="topNavButton" id="createButton">
 			</form>
-			<form method="link" action="UpdateRecord.php">
+			<form method="link" action="UpdateRecord.html">
 				<input type="submit" value="Update Record" class="topNavButton" id="updateButton">
 			</form>
-			<form method="link" action="DeleteRecord.php">
+			<form method="link" action="DeleteRecord.html">
 				<input type="submit" value="Delete Record" class="topNavButton" id="deleteButton">
 			</form>
 		</div>
