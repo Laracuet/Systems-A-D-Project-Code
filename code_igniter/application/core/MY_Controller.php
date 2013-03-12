@@ -13,3 +13,19 @@ class MY_Controller extends CI_Controller{
 	}
 	
 }
+
+class Logged_in extends MY_Controller{
+	
+	public function __construct(){
+		parent::__construct();
+		$this->checkLoggedIn();
+	}
+	
+	private function checkLoggedIn(){
+		if(!$this->session->userdata('loggedIn')){
+			redirect(site_url());
+		}
+	}
+	
+	
+}
