@@ -3,27 +3,15 @@
 <link 
 			rel="stylesheet"
 			type="text/css"
-			href="ContinuumStyleMain.css"
+			href="/theme/css/ContinuumStyleMain.css"
 />
 <head>
-<style>
-#dynamicInput {
-		margin-left: 50px;	
-}
-
-#addButton {
-        position: relative;
-        left: 50px; 
-        font-size: 115%; 
-}
-
-</style>
 </head>
 <body>
 	<div id="foreground">
 		<div id="header">
 		</div>
-		<img src="Continuum Logo.gif" alt="Continuum Managed Services" id="logo"/>
+		<img src="/theme/img/Continuum Logo.gif" alt="Continuum Managed Services" id="logo"/>
 		<div id="topNav">
 		<form method="link" action="ViewRecords.html">
 				<input type="submit" value="View Records" class="topNavButton" id="viewButton">
@@ -37,18 +25,8 @@
 			<form method="link" action="DeleteRecord.html">
 				<input type="submit" value="Delete Record" class="topNavButton" id="deleteButton">
 			</form>
-		</div> 
-		<center>
-		<div id="crossBar">
 		</div>
+			<center>
+		<div id="crossBar">
+		</div> 
 		</center>
-		<script src="addInput.js" language="Javascript" type="text/javascript"></script>
-			<form method="POST">
-     			<div id="dynamicInput">
-          				Account #1 <br><input type="text" name="myInputs[]">
-     			</div>
-    		<input id="addButton" type="button" value="+" onClick="addInput('dynamicInput');">
-			</form>
-	</div>
-</body>
-</html>
