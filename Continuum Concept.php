@@ -3,7 +3,7 @@
 <link 
 			rel="stylesheet"
 			type="text/css"
-			href="ContinuumStyleMain.css"
+			href="/public_html/theme/css/ContinuumStyleMain.css"
 />
 <head>
 </head>
