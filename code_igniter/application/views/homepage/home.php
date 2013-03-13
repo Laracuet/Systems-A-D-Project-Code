@@ -4,7 +4,7 @@
 			Welcome!
 		</h2>
 		<p>
-			Hello Acoount Managers. Here is where you can record and update your survey results
+			Hello Account Managers. Here is where you can record and update your survey results
 			 from current and/or prospective customers. Please login in order to continue.
 		</p>
 	</div>

@@ -1,9 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<link rel="stylesheet" type="text/css" href="/theme/bootstrap/css/bootstrap-responsive.min.css" />
-	<link rel="stylesheet" type="text/css" href="/theme/bootstrap/css/bootstrap.min.css" />
-	<link rel="stylesheet" type="text/css" href="/theme/css/ContinuumStyleMain.css" />
+	<?php // INCLUDES
+		include(BASE_APPLICATION_ROOT.'includes/constants.php');
+	?>
+	
+	<link rel="stylesheet" type="text/css" href= <?php echo BOOTSTRAP_DIR . "css/bootstrap-responsive.min.css" ?> />
+	<link rel="stylesheet" type="text/css" href= <?php echo BOOTSTRAP_DIR . 'css/bootstrap.min.css' ?> />
+	<link rel="stylesheet" type="text/css" href= <?php echo CSS_DIR . 'ContinuumStyleMain.css' ?> />
+	
 </head>
 <body>
 	<div class="container" id="main_content">
