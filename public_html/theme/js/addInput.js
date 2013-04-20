@@ -6,11 +6,11 @@ function addInput(divName){
      }
      else {
         var newdiv = document.createElement('div');
-        newdiv.innerHTML = "Account #" + (counter + 1) + " <br><input type='text' name='accountsRequested[]'>";
+        newdiv.innerHTML = "Account #" + (counter + 1) + " <br><input type='text' name='competitiveProducts[]'>";
     	document.getElementById(divName).appendChild(newdiv);
         counter++;
      }
-     var testDiv = document.createElement('div'); 
+     //var testDiv = document.createElement('div'); 
      /*for(var i=0;i<dropDown.length;i++){
 		document.write("<b>dropDown["+i+"] is </b>=>"+dropDown[i]+"<br>");
 	 } 
