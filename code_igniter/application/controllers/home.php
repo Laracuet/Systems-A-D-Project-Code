@@ -20,8 +20,11 @@ class Home extends MY_Controller {
 	public function index()
 	{
 		if($this->input->server('REQUEST_METHOD') == 'POST'){
-			$this->login();
-			redirect(site_url('launchpad'));
+			$this->load->library('user_authentication');
+			if($this->user_authentication->verifyCredentials($this->input->post('username'),$this->input->post('password'))){
+				$this->login();
+				redirect(site_url('launchpad'));	
+			}
 		}
 		$this->load->view('homepage/header');
 		$this->load->view('homepage/home');
