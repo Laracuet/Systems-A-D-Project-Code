@@ -121,6 +121,15 @@
 		<?php echo form_label('Tech Ops Review Date','TechOpsReviewDate'); ?>
 		<?php echo form_input(array('name'=>'Tech Ops Review Date', 'id'=>'TechOpsReviewDate', 'placeholder'=>'mm/dd/yyyy')); ?>
 		
+		<?php echo form_label('Total Server Agents','TotalServerAgents'); ?>
+		<?php echo form_input(array('name'=>'Total Server Agents', 'id'=>'TotalServerAgents', 'placeholder'=>'Total Server Agents')); ?>
+		
+		<?php echo form_label('Total Servers Managed','TotalServersManaged'); ?>
+		<?php echo form_input(array('name'=>'Total Servers Managed', 'id'=>'TotalServersManaged', 'placeholder'=>'Total Servers Managed')); ?>
+		
+		<?php echo form_label('Total Site Count','TotalSiteCount'); ?>
+		<?php echo form_input(array('name'=>'Total Servers Managed', 'id'=>'TotalServersManaged', 'placeholder'=>'Total Servers Managed')); ?>
+		
 		
 	</div>
 	
@@ -201,6 +210,14 @@
 		
 		<?php echo form_label('Total Desktops Managed','TotalDesktopsManaged'); ?>
 		<?php echo form_input(array('name'=>'Total Desktops Managed', 'id'=>'TotalDesktopsManaged', 'placeholder'=>'Total Desktops Managed')); ?>
+		
+		<?php echo form_label('Virtualization','Virtualization'); ?>
+		<p1>Yes</p1>
+		<?php echo form_radio('Virtualization', '1', False); ?>
+		<p1>No</p1>
+		<?php echo form_radio('Virtualization', '0', False); ?>
+		
+		
 		
 		
 	</div>
