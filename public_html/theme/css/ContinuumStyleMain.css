@@ -7,7 +7,7 @@ body {
 		line-height: 150%; 	
 }
 
-h1,h2,h3,h4,h5,h6 {
+h1,h2,h3,h4,h5,h6 { 
 	text-align:center;
 }
 .center {
@@ -151,4 +151,18 @@ input.customer-search{
 	padding: 7px 9px;
 }
 
+
+/* --------------------------  Launchpad -------------------- */
+
+.newCustomerCreate{
+	position: relative;
+	left: 510px;
+	bottom: 272px;
+}
+
+.newCustomerCreateSubmit {
+	position: relative;
+	left: 300px;
+	bottom: 145px;
+}
 
