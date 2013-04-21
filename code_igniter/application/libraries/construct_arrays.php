@@ -9,25 +9,25 @@ class Construct_arrays {
 	private $CI;
 		
 	function __construct(){
-		// Table
-		$this->account_type = createArray('account_type');
-		$this->bdr_competition = createArray('bdr_competition',TRUE);
-		$this->classification = createArray('classification');
-		$this->cloud_vendors = createArray('cloud_vendors',TRUE);
-		$this->crm_applications = createArray('crm_applications',TRUE);
-		$this->datacenter = createArray('datacenter');
-		$this->hosted_apps = createArray('hosted_apps',TRUE);
-		$this->hypervisor_virtualization_platform = createArray('hypervisor_virtualization_platform',TRUE);
-		$this->industry_affiliates = createArray('industry_affiliates',TRUE);
-		$this->psa_vendor = createArray('psa_vendor');
-		$this->region = createArray('region');
-		$this->rmm_adoption = createArray('rmm_adoption',TRUE);
-		$this->target_industry_verticals = createArray('target_industry_verticals',TRUE);
-		$this->ticketing_application = createArray('ticketing_application');
-		$this->virtualization_platform = createArray('virtualization_platform',TRUE);
-		
 		// get instance
 		$this->CI =& get_instance();
+		// Table
+		$this->account_type = $this->createArray('account_type');
+		$this->bdr_competition = $this->createArray('bdr_competition',TRUE);
+		$this->classification = $this->createArray('classification');
+		$this->cloud_vendors = $this->createArray('cloud_vendors',TRUE);
+		$this->crm_applications = $this->createArray('crm_applications',TRUE);
+		$this->datacenter = $this->createArray('datacenter');
+		$this->hosted_apps = $this->createArray('hosted_apps',TRUE);
+		$this->hypervisor_virtualization_platform = $this->createArray('hypervisor_virtualization_platform',TRUE);
+		$this->industry_affiliates = $this->createArray('industry_affiliates',TRUE);
+		$this->psa_vendor = $this->createArray('psa_vendor');
+		$this->region = $this->createArray('region');
+		$this->rmm_adoption = $this->createArray('rmm_adoption',TRUE);
+		$this->rmm_competition = $this->createArray('rmm_competition',TRUE);
+		$this->target_industry_verticals = $this->createArray('target_industry_verticals',TRUE);
+		$this->ticketing_application = $this->createArray('ticketing_application');
+		$this->virtualization_platform = $this->createArray('virtualization_platform',TRUE);
 	}
 	
 	public function getArray($attrName){
@@ -36,10 +36,11 @@ class Construct_arrays {
 	
 	private function createArray($tableName,$manyToMany = FALSE){
 		$this->CI->load->model('construct_arrays_model');
-		if($manyToMany){
-			$tableName .= '_many';
-		}
-		$this->CI->construct_arrays_model->createArray($tableName);
+		$array = $this->CI->construct_arrays_model->createArray($tableName);
 		
+		if(is_null($array)){
+			return array();
+		}
+		return $array;
 	}
 }
