@@ -48,7 +48,6 @@
 	</div>
 </div>
 <<<<<<< HEAD
-<<<<<<< HEAD
 <div class="newCustomerCreateSubmit">
 	<?php echo form_submit(array('name'=>'submit','class'=>'btn btn-large btn-primary'), 'Create'); ?>
 	<?php echo form_close(); ?>
@@ -220,8 +219,6 @@
 	
 </div>
 
-=======
->>>>>>> cbe5c6f7873596e476d683b8ce0a86a09563f790
 =======
 >>>>>>> cbe5c6f7873596e476d683b8ce0a86a09563f790
 
