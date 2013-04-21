@@ -6,9 +6,9 @@ class MY_Controller extends CI_Controller{
 		parent::__construct();
 	}
 	
-	protected function makePage($view){
+	protected function makePage($view, $context = null){
 		$this->load->view('templates/header');
-		$this->load->view('main_content/' . $view);
+		$this->load->view('main_content/' . $view, $context);
 		$this->load->view('templates/footer');
 	}
 	

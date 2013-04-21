@@ -1,56 +1,53 @@
-<?php $oneToTen = array('1'=>'1', '2'=>'2','3'=>'3','4'=>'4','5'=>'5','6'=>'6','7'=>'7','8'=>'8','9'=>'9','10'=>'10'); ?>
-
 <div class="row">
-	<div class="span6 title">
-		<h1>
-			Search for Customer
-		</h1>
+	<div class="span6">
+		<div class="row title">
+			<div class="center">
+				<h1>
+					Search for Customer
+				</h1>
+			</div>
+		</div>
+		<div class="row">
+			<div class="center">
+				<?php echo form_open(''); ?>
+				<?php echo form_input(array('name'=>'survey','class'=>'input-block-level customer-search','placeholder'=>'Survey Id')); ?>
+				<img src="<?php echo base_url('theme/img/question_mark.jpg');?>" height="40" width="40" />
+			</div>
+		</div>
+		<div class="row">
+			<div class="center">
+				<h2>
+					OR
+				</h2>
+			</div>
+		</div>
+		<div class="row">
+			<div class="center">
+				<?php echo form_input(array('name'=>'customer_id','class'=>'input-block-level customer-search','placeholder'=>'Customer Id')); ?>
+				<img src="<?php echo base_url('theme/img/question_mark.jpg');?>" height="40" width="40" />
+			</div>
+		</div>
+		<div class="row">
+			<div class="center">
+				<?php echo form_submit(array('name'=>'submit','class'=>'btn btn-large btn-primary'), 'Search'); ?>
+				<?php echo form_close(); ?>
+			</div>
+		</div>
 	</div>
-	<div class="span6 title">
-		<h1>
-			Create New Survey
-		</h1>
-	</div>
-</div>
-
-<div class="row">
-	<?php echo form_open(''); ?>
-	<div class="span6 center">
-		<?php echo form_input(array('name'=>'survey','class'=>'input-block-level customer-search','placeholder'=>'Survey Id')); ?>
-		<img src="<?php echo base_url('theme/img/question_mark.jpg');?>" height="40" width="40" />
-	</div>
-</div>
-
-<div class="row">
-	<div class="span5 center">
-		<h2>
-			OR
-		</h2>
-	</div>
-</div>
-
-<div class="row">
-	<div class="span6 center">
-		<?php echo form_input(array('name'=>'customer_id','class'=>'input-block-level customer-search','placeholder'=>'Customer Id')); ?>
-		<img src="<?php echo base_url('theme/img/question_mark.jpg');?>" height="40" width="40" />
-	</div>
-</div>
-
-<div class="row">
-	<div class="span5 center">
-		<?php echo form_submit(array('name'=>'submit','class'=>'btn btn-large btn-primary'), 'Search'); ?>
-		<?php echo form_close(); ?>
-	</div>
-</div>
-
-
-<div class="newCustomerCreate">
-	<?php echo form_open(''); ?>
-	<div class="span4 center">
-		<?php echo form_input(array('name'=>'survey','class'=>'input-block-level customer-search','placeholder'=>'Name')); ?>
-		<img src="<?php echo base_url('theme/img/question_mark.jpg');?>" height="40" width="40"/>
+	<div class="span6">
+		<div class="row title">
+			<h1>
+				Create New Survey
+			</h1>
+		</div>
+		<div class="row">
+			<div class="center">
+				<a href="<?php echo site_url('customers/add/'); ?>" class="btn btn-large btn-primary"> Create</a>
+			</div>
+		</div>
 	</div>
 </div>
+<<<<<<< HEAD
 <div class="newCustomerCreateSubmit">
 	<?php echo form_submit(array('name'=>'submit','class'=>'btn btn-large btn-primary'), 'Create'); ?>
 	<?php echo form_close(); ?>
@@ -218,12 +215,12 @@
 		<?php echo form_radio('Virtualization', '0', False); ?>
 		
 		
-		
-		
 	</div>
 	
 </div>
 
+=======
+>>>>>>> cbe5c6f7873596e476d683b8ce0a86a09563f790
 
 
 
