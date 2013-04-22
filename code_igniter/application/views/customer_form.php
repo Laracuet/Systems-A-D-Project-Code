@@ -1,7 +1,7 @@
 
 <!-- Creating a new Survey should bring up this form -->
 <br />
-<div class="newCustomerForm">
+<div class="row newCustomerForm">
 	<?php echo form_open(''); ?>
 	<div class="companyInfo span5">
 		
@@ -212,4 +212,8 @@
 		
 	</div>
 	
+</div>
+<div class="row center">
+	<?php echo form_submit(array('name'=>'submit','class'=>'btn btn-large btn-primary'), 'Submit'); ?>
+	<?php echo form_close(); ?>
 </div>
