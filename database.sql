@@ -1,9 +1,9 @@
 -- phpMyAdmin SQL Dump
--- version 3.5.5
+-- version 3.5.7
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: Apr 21, 2013 at 01:25 AM
+-- Generation Time: Apr 21, 2013 at 11:33 PM
 -- Server version: 5.5.29
 -- PHP Version: 5.4.10
 
@@ -82,7 +82,18 @@ CREATE TABLE `account_type` (
   `name` varchar(80) NOT NULL,
   PRIMARY KEY (`id`),
   UNIQUE KEY `name` (`name`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=6 ;
+
+--
+-- Dumping data for table `account_type`
+--
+
+INSERT INTO `account_type` (`id`, `name`) VALUES
+(3, 'Eval Partner'),
+(5, 'Infotech Partner'),
+(2, 'Lost Partner'),
+(1, 'Partner'),
+(4, 'Terminated Partner');
 
 -- --------------------------------------------------------
 
@@ -94,7 +105,43 @@ CREATE TABLE `bdr_competition` (
   `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
   `name` varchar(80) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=31 ;
+
+--
+-- Dumping data for table `bdr_competition`
+--
+
+INSERT INTO `bdr_competition` (`id`, `name`) VALUES
+(1, 'Datto'),
+(2, 'eFolder'),
+(3, 'Chartec'),
+(4, 'Zenith Infotech'),
+(5, 'Symantec'),
+(6, 'Intronis'),
+(7, 'AppAssure'),
+(8, 'NetApp'),
+(9, 'Equalogic'),
+(10, 'StorageCraft'),
+(11, 'MozyPro'),
+(12, 'Acronis'),
+(13, 'Axcient'),
+(14, 'Barracuda'),
+(15, 'IBM'),
+(16, 'HP'),
+(17, 'Venbu'),
+(18, 'Veritas'),
+(19, 'SOS Online Backup'),
+(20, 'iBackup'),
+(21, 'Sun'),
+(22, 'EMC'),
+(23, 'Buffalo Technology'),
+(24, 'Unitrends'),
+(25, 'SonicWALL'),
+(26, 'DELL'),
+(27, 'Cisco Systems'),
+(28, 'Seagate'),
+(29, 'MX Logic'),
+(30, 'XiloCore');
 
 -- --------------------------------------------------------
 
@@ -122,7 +169,16 @@ CREATE TABLE `classification` (
   `name` varchar(80) NOT NULL,
   PRIMARY KEY (`id`),
   UNIQUE KEY `name` (`name`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=4 ;
+
+--
+-- Dumping data for table `classification`
+--
+
+INSERT INTO `classification` (`id`, `name`) VALUES
+(1, 'A'),
+(2, 'B'),
+(3, 'C');
 
 -- --------------------------------------------------------
 
@@ -134,7 +190,17 @@ CREATE TABLE `cloud_vendors` (
   `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
   `name` varchar(80) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=5 ;
+
+--
+-- Dumping data for table `cloud_vendors`
+--
+
+INSERT INTO `cloud_vendors` (`id`, `name`) VALUES
+(1, 'Microsoft'),
+(2, 'Google'),
+(3, 'Amazon'),
+(4, 'Rackspace');
 
 -- --------------------------------------------------------
 
@@ -162,7 +228,24 @@ CREATE TABLE `crm_applications` (
   `name` varchar(80) NOT NULL,
   PRIMARY KEY (`id`),
   UNIQUE KEY `name` (`name`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=13 ;
+
+--
+-- Dumping data for table `crm_applications`
+--
+
+INSERT INTO `crm_applications` (`id`, `name`) VALUES
+(4, 'Autotask'),
+(6, 'CommitCRM'),
+(3, 'ConnectWise'),
+(1, 'Custom Developed'),
+(8, 'MS CRM'),
+(2, 'Quickbooks'),
+(5, 'Salesforce.com'),
+(9, 'SalesLogix'),
+(11, 'Spiceworks'),
+(7, 'Tigerpaw'),
+(10, 'TOPS');
 
 -- --------------------------------------------------------
 
@@ -190,7 +273,15 @@ CREATE TABLE `datacenter` (
   `name` varchar(80) NOT NULL,
   PRIMARY KEY (`id`),
   UNIQUE KEY `name` (`name`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=3 ;
+
+--
+-- Dumping data for table `datacenter`
+--
+
+INSERT INTO `datacenter` (`id`, `name`) VALUES
+(1, 'Internally Owned and Operated'),
+(2, 'Outsourced to Third Party Vendor');
 
 -- --------------------------------------------------------
 
@@ -203,7 +294,16 @@ CREATE TABLE `hosted_apps` (
   `name` varchar(80) NOT NULL,
   PRIMARY KEY (`id`),
   UNIQUE KEY `name` (`name`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=4 ;
+
+--
+-- Dumping data for table `hosted_apps`
+--
+
+INSERT INTO `hosted_apps` (`id`, `name`) VALUES
+(1, 'Exchange'),
+(2, 'Google Apps'),
+(3, 'Office365');
 
 -- --------------------------------------------------------
 
@@ -231,7 +331,18 @@ CREATE TABLE `hypervisor_virtualization_platform` (
   `name` varchar(80) NOT NULL,
   PRIMARY KEY (`id`),
   UNIQUE KEY `name` (`name`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=7 ;
+
+--
+-- Dumping data for table `hypervisor_virtualization_platform`
+--
+
+INSERT INTO `hypervisor_virtualization_platform` (`id`, `name`) VALUES
+(3, 'Citrix XEN'),
+(5, 'Google (Google Apps)'),
+(2, 'Hyper V'),
+(4, 'Microsoft (Azure)'),
+(1, 'VMWare');
 
 -- --------------------------------------------------------
 
@@ -259,7 +370,31 @@ CREATE TABLE `industry_affiliates` (
   `name` varchar(80) NOT NULL,
   PRIMARY KEY (`id`),
   UNIQUE KEY `name` (`name`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=21 ;
+
+--
+-- Dumping data for table `industry_affiliates`
+--
+
+INSERT INTO `industry_affiliates` (`id`, `name`) VALUES
+(6, 'ASCII'),
+(3, 'CMIT'),
+(1, 'Computer Troubleshooters'),
+(17, 'Continuum PAC'),
+(11, 'Expetec'),
+(4, 'GAP'),
+(10, 'HTG'),
+(20, 'IATI'),
+(13, 'Ingram Micro VTN'),
+(12, 'Microsoft SBS'),
+(2, 'MSFT Partner'),
+(7, 'MSP Mentor'),
+(5, 'Robin Robins'),
+(8, 'SMB Nation'),
+(15, 'TAG'),
+(19, 'Taylor Business Group'),
+(14, 'Tech Data'),
+(16, 'VMware');
 
 -- --------------------------------------------------------
 
@@ -287,7 +422,17 @@ CREATE TABLE `psa_vendor` (
   `name` varchar(80) NOT NULL,
   PRIMARY KEY (`id`),
   UNIQUE KEY `name` (`name`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=5 ;
+
+--
+-- Dumping data for table `psa_vendor`
+--
+
+INSERT INTO `psa_vendor` (`id`, `name`) VALUES
+(1, 'Autotask'),
+(4, 'CommitCRM'),
+(2, 'ConnectWise'),
+(3, 'TigerPaw');
 
 -- --------------------------------------------------------
 
@@ -300,7 +445,18 @@ CREATE TABLE `region` (
   `name` varchar(80) NOT NULL,
   PRIMARY KEY (`id`),
   UNIQUE KEY `name` (`name`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=6 ;
+
+--
+-- Dumping data for table `region`
+--
+
+INSERT INTO `region` (`id`, `name`) VALUES
+(3, 'Mid-Atlantic'),
+(1, 'Northeast'),
+(5, 'Northwest'),
+(4, 'Southeast'),
+(2, 'Southwest');
 
 -- --------------------------------------------------------
 
@@ -312,7 +468,39 @@ CREATE TABLE `rmm_adoption` (
   `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
   `name` varchar(80) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=27 ;
+
+--
+-- Dumping data for table `rmm_adoption`
+--
+
+INSERT INTO `rmm_adoption` (`id`, `name`) VALUES
+(1, 'Chat Support'),
+(2, 'Client Portal'),
+(3, 'LMI'),
+(4, 'Network Detective'),
+(5, 'Password Vault'),
+(6, 'Patching'),
+(7, 'RMM Service Plans'),
+(8, 'Ticketing'),
+(9, 'Vipre'),
+(10, 'Communicator'),
+(11, 'ContinuumU'),
+(12, 'Hyper-V'),
+(13, 'Intellimonitoring'),
+(14, 'NOC Access Levels'),
+(15, 'Off-Hours Desktop Maintenance'),
+(16, 'Portal Reporting'),
+(17, 'PSP'),
+(18, 'RMM Service Plans'),
+(19, 'Scripting'),
+(20, 'SNMP/OID'),
+(21, 'User Roles'),
+(22, 'VMware Monitoring'),
+(23, 'VSD'),
+(24, 'Going Green'),
+(25, 'Network Detective'),
+(26, 'RMM Agent Types');
 
 -- --------------------------------------------------------
 
@@ -339,7 +527,37 @@ CREATE TABLE `rmm_competition` (
   `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
   `name` varchar(80) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=25 ;
+
+--
+-- Dumping data for table `rmm_competition`
+--
+
+INSERT INTO `rmm_competition` (`id`, `name`) VALUES
+(1, 'Kaseya'),
+(2, 'GFI MAX'),
+(3, 'LabTech'),
+(4, 'Go To Assist'),
+(5, 'Spiceworks'),
+(6, 'LPI'),
+(7, 'N-able'),
+(8, 'PacketTrap'),
+(9, 'Ingram Micro Seismic'),
+(10, 'DELL'),
+(11, 'LanDesk'),
+(12, 'Nagios'),
+(13, 'Microsoft'),
+(14, 'itControl Solutions'),
+(15, 'HP OpenView'),
+(16, 'Solar Winds'),
+(17, 'HyBlue'),
+(18, 'HandsFree'),
+(19, 'SolarWinds'),
+(20, 'AppNeta'),
+(21, 'Nimsoft'),
+(22, 'Symantec'),
+(23, 'HyBlue'),
+(24, 'IT ControlSuite');
 
 -- --------------------------------------------------------
 
@@ -367,7 +585,47 @@ CREATE TABLE `target_industry_verticals` (
   `name` varchar(80) NOT NULL,
   PRIMARY KEY (`id`),
   UNIQUE KEY `name` (`name`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=39 ;
+
+--
+-- Dumping data for table `target_industry_verticals`
+--
+
+INSERT INTO `target_industry_verticals` (`id`, `name`) VALUES
+(5, 'Agriculture'),
+(6, 'Apparel'),
+(7, 'Banking'),
+(8, 'Biotechnology'),
+(9, 'Chemicals'),
+(10, 'Communications'),
+(11, 'Construction'),
+(12, 'Consulting'),
+(13, 'Education'),
+(14, 'Electronics'),
+(15, 'Energy'),
+(16, 'Engineering'),
+(17, 'Entertainment'),
+(18, 'Environmental'),
+(1, 'Finance'),
+(19, 'Food & Beverage'),
+(20, 'Government'),
+(2, 'Healthcare'),
+(21, 'Hospitality'),
+(4, 'Insurance'),
+(3, 'Legal'),
+(23, 'Machinery'),
+(24, 'Manufacturing'),
+(25, 'Media'),
+(26, 'Municipalities'),
+(27, 'Not For Profit'),
+(28, 'Recreation'),
+(29, 'Residential'),
+(30, 'Retail'),
+(31, 'Shipping'),
+(32, 'Technology'),
+(33, 'Telecommunications'),
+(34, 'Transportation'),
+(35, 'Utilities');
 
 -- --------------------------------------------------------
 
@@ -395,7 +653,17 @@ CREATE TABLE `ticketing_application` (
   `name` varchar(80) NOT NULL,
   PRIMARY KEY (`id`),
   UNIQUE KEY `name` (`name`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=5 ;
+
+--
+-- Dumping data for table `ticketing_application`
+--
+
+INSERT INTO `ticketing_application` (`id`, `name`) VALUES
+(1, 'Autotask'),
+(2, 'ConnectWise'),
+(3, 'TigerPaw'),
+(4, 'Zendesk');
 
 -- --------------------------------------------------------
 
@@ -430,7 +698,18 @@ CREATE TABLE `virtualization_platform` (
   `name` varchar(80) NOT NULL,
   PRIMARY KEY (`id`),
   UNIQUE KEY `name` (`name`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=8 ;
+
+--
+-- Dumping data for table `virtualization_platform`
+--
+
+INSERT INTO `virtualization_platform` (`id`, `name`) VALUES
+(4, 'Citrix'),
+(1, 'Hyper-V'),
+(6, 'SmartStyle'),
+(5, 'VirtualBox'),
+(2, 'VMWare');
 
 -- --------------------------------------------------------
 
@@ -455,78 +734,78 @@ CREATE TABLE `virtualization_platform_many` (
 -- Constraints for table `account_information`
 --
 ALTER TABLE `account_information`
-  ADD CONSTRAINT `account_information_ibfk_6` FOREIGN KEY (`account_type_id`) REFERENCES `account_type` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
   ADD CONSTRAINT `account_information_ibfk_2` FOREIGN KEY (`region_id`) REFERENCES `region` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
   ADD CONSTRAINT `account_information_ibfk_3` FOREIGN KEY (`ticketing_application_id`) REFERENCES `ticketing_application` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
   ADD CONSTRAINT `account_information_ibfk_4` FOREIGN KEY (`datacenter_id`) REFERENCES `datacenter` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
-  ADD CONSTRAINT `account_information_ibfk_5` FOREIGN KEY (`classification_id`) REFERENCES `classification` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
+  ADD CONSTRAINT `account_information_ibfk_5` FOREIGN KEY (`classification_id`) REFERENCES `classification` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
+  ADD CONSTRAINT `account_information_ibfk_6` FOREIGN KEY (`account_type_id`) REFERENCES `account_type` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
 -- Constraints for table `bdr_competition_many`
 --
 ALTER TABLE `bdr_competition_many`
-  ADD CONSTRAINT `bdr_competition_many_ibfk_2` FOREIGN KEY (`account_id`) REFERENCES `account_type` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
-  ADD CONSTRAINT `bdr_competition_many_ibfk_1` FOREIGN KEY (`bdr_competition_id`) REFERENCES `bdr_competition` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
+  ADD CONSTRAINT `bdr_competition_many_ibfk_1` FOREIGN KEY (`bdr_competition_id`) REFERENCES `bdr_competition` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
+  ADD CONSTRAINT `bdr_competition_many_ibfk_2` FOREIGN KEY (`account_id`) REFERENCES `account_type` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
 -- Constraints for table `cloud_vendors_many`
 --
 ALTER TABLE `cloud_vendors_many`
-  ADD CONSTRAINT `cloud_vendors_many_ibfk_2` FOREIGN KEY (`account_id`) REFERENCES `account_information` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
-  ADD CONSTRAINT `cloud_vendors_many_ibfk_1` FOREIGN KEY (`cloud_vendors_id`) REFERENCES `cloud_vendors` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
+  ADD CONSTRAINT `cloud_vendors_many_ibfk_1` FOREIGN KEY (`cloud_vendors_id`) REFERENCES `cloud_vendors` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
+  ADD CONSTRAINT `cloud_vendors_many_ibfk_2` FOREIGN KEY (`account_id`) REFERENCES `account_information` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
 -- Constraints for table `crm_applications_many`
 --
 ALTER TABLE `crm_applications_many`
-  ADD CONSTRAINT `crm_applications_many_ibfk_2` FOREIGN KEY (`account_id`) REFERENCES `account_information` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
-  ADD CONSTRAINT `crm_applications_many_ibfk_1` FOREIGN KEY (`crm_applications_id`) REFERENCES `crm_applications` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
+  ADD CONSTRAINT `crm_applications_many_ibfk_1` FOREIGN KEY (`crm_applications_id`) REFERENCES `crm_applications` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
+  ADD CONSTRAINT `crm_applications_many_ibfk_2` FOREIGN KEY (`account_id`) REFERENCES `account_information` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
 -- Constraints for table `hosted_apps_many`
 --
 ALTER TABLE `hosted_apps_many`
-  ADD CONSTRAINT `hosted_apps_many_ibfk_2` FOREIGN KEY (`account_id`) REFERENCES `account_information` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
-  ADD CONSTRAINT `hosted_apps_many_ibfk_1` FOREIGN KEY (`hosted_apps_id`) REFERENCES `hosted_apps` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
+  ADD CONSTRAINT `hosted_apps_many_ibfk_1` FOREIGN KEY (`hosted_apps_id`) REFERENCES `hosted_apps` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
+  ADD CONSTRAINT `hosted_apps_many_ibfk_2` FOREIGN KEY (`account_id`) REFERENCES `account_information` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
 -- Constraints for table `hypervisor_virtualization_platform_many`
 --
 ALTER TABLE `hypervisor_virtualization_platform_many`
-  ADD CONSTRAINT `hypervisor_virtualization_platform_many_ibfk_2` FOREIGN KEY (`account_id`) REFERENCES `account_information` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
-  ADD CONSTRAINT `hypervisor_virtualization_platform_many_ibfk_1` FOREIGN KEY (`hypervisor_virtualization_platform_id`) REFERENCES `hypervisor_virtualization_platform` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
+  ADD CONSTRAINT `hypervisor_virtualization_platform_many_ibfk_1` FOREIGN KEY (`hypervisor_virtualization_platform_id`) REFERENCES `hypervisor_virtualization_platform` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
+  ADD CONSTRAINT `hypervisor_virtualization_platform_many_ibfk_2` FOREIGN KEY (`account_id`) REFERENCES `account_information` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
 -- Constraints for table `industry_affiliates_many`
 --
 ALTER TABLE `industry_affiliates_many`
-  ADD CONSTRAINT `industry_affiliates_many_ibfk_2` FOREIGN KEY (`account_id`) REFERENCES `account_information` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
-  ADD CONSTRAINT `industry_affiliates_many_ibfk_1` FOREIGN KEY (`industry_affiliates_id`) REFERENCES `industry_affiliates` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
+  ADD CONSTRAINT `industry_affiliates_many_ibfk_1` FOREIGN KEY (`industry_affiliates_id`) REFERENCES `industry_affiliates` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
+  ADD CONSTRAINT `industry_affiliates_many_ibfk_2` FOREIGN KEY (`account_id`) REFERENCES `account_information` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
 -- Constraints for table `rmm_adoption_many`
 --
 ALTER TABLE `rmm_adoption_many`
-  ADD CONSTRAINT `rmm_adoption_many_ibfk_2` FOREIGN KEY (`account_id`) REFERENCES `account_information` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
-  ADD CONSTRAINT `rmm_adoption_many_ibfk_1` FOREIGN KEY (`rmm_adomption_id`) REFERENCES `rmm_adoption` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
+  ADD CONSTRAINT `rmm_adoption_many_ibfk_1` FOREIGN KEY (`rmm_adomption_id`) REFERENCES `rmm_adoption` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
+  ADD CONSTRAINT `rmm_adoption_many_ibfk_2` FOREIGN KEY (`account_id`) REFERENCES `account_information` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
 -- Constraints for table `rmm_competition_many`
 --
 ALTER TABLE `rmm_competition_many`
-  ADD CONSTRAINT `rmm_competition_many_ibfk_2` FOREIGN KEY (`account_id`) REFERENCES `account_information` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
-  ADD CONSTRAINT `rmm_competition_many_ibfk_1` FOREIGN KEY (`rmm_competition_id`) REFERENCES `rmm_competition` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
+  ADD CONSTRAINT `rmm_competition_many_ibfk_1` FOREIGN KEY (`rmm_competition_id`) REFERENCES `rmm_competition` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
+  ADD CONSTRAINT `rmm_competition_many_ibfk_2` FOREIGN KEY (`account_id`) REFERENCES `account_information` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
 -- Constraints for table `target_industry_verticals_many`
 --
 ALTER TABLE `target_industry_verticals_many`
-  ADD CONSTRAINT `target_industry_verticals_many_ibfk_2` FOREIGN KEY (`account_id`) REFERENCES `account_information` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
-  ADD CONSTRAINT `target_industry_verticals_many_ibfk_1` FOREIGN KEY (`target_industry_verticals_id`) REFERENCES `target_industry_verticals` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
+  ADD CONSTRAINT `target_industry_verticals_many_ibfk_1` FOREIGN KEY (`target_industry_verticals_id`) REFERENCES `target_industry_verticals` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
+  ADD CONSTRAINT `target_industry_verticals_many_ibfk_2` FOREIGN KEY (`account_id`) REFERENCES `account_information` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
 -- Constraints for table `virtualization_platform_many`
 --
 ALTER TABLE `virtualization_platform_many`
-  ADD CONSTRAINT `virtualization_platform_many_ibfk_2` FOREIGN KEY (`account_id`) REFERENCES `account_information` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
-  ADD CONSTRAINT `virtualization_platform_many_ibfk_1` FOREIGN KEY (`virtualization_platform_id`) REFERENCES `virtualization_platform` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
+  ADD CONSTRAINT `virtualization_platform_many_ibfk_1` FOREIGN KEY (`virtualization_platform_id`) REFERENCES `virtualization_platform` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
+  ADD CONSTRAINT `virtualization_platform_many_ibfk_2` FOREIGN KEY (`account_id`) REFERENCES `account_information` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
