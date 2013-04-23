@@ -1,16 +1,32 @@
 <?php if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 
 class Create extends Logged_in {
+	
+	private $form;
 
 	public function index(){
-		
-		$oneToTen = array('1'=>'1', '2'=>'2','3'=>'3','4'=>'4','5'=>'5','6'=>'6','7'=>'7','8'=>'8','9'=>'9','10'=>'10');
-		$this->load->library('construct_arrays');
-		$context=array('arrays'=>$this->construct_arrays,'oneToTen'=>$oneToTen);
-		
-		// Construct arrays
-		$this->load->view('templates/header');
-		$this->load->view('customer_form',$context);
-		$this->load->view('templates/footer');
+		$this->load->library('customer_form');
+		$this->form = $this->customer_form;
+		if($this->post()){
+			$this->load->view('templates/header');
+			$this->load->view('main_content/create_success');
+			$this->load->view('templates/footer');
+		}else{
+			$context=array('form'=>$this->form);
+			// Construct arrays
+			$this->load->view('templates/header');
+			$this->load->view('main_content/create',$context);
+			$this->load->view('templates/footer');	
+		}
+	}
+	
+	private function post(){
+		if($this->input->server('REQUEST_METHOD') == "POST"){
+			if($this->form->validateForm($this->input->post())){
+				$this->form->save();
+				return TRUE;
+			}
+		}
+		return FALSE;
 	}
 }

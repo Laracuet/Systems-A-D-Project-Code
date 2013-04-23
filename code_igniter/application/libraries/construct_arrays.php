@@ -40,6 +40,8 @@ class Construct_arrays {
 		
 		if(is_null($array)){
 			return array();
+		}elseif(!$manyToMany){
+			$array['null'] = '--Select--';
 		}
 		return $array;
 	}
