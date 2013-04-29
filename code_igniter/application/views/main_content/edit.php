@@ -9,7 +9,7 @@ echo form_open("");
 <div class="row">
 	<div class="center">
 		<?php
-			echo form_submit(array('name'=>'submit_create','value'=>'Submit','class'=>'btn btn-large btn-primary'));
+			echo form_submit(array('name'=>'submit_edit','value'=>'Submit','class'=>'btn btn-large btn-primary'));
 		?>
 	</div>
 </div>

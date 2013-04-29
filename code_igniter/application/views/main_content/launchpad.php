@@ -9,8 +9,8 @@
 		</div>
 		<div class="row">
 			<div class="center">
-				<?php echo form_open(''); ?>
-				<?php echo form_input(array('name'=>'survey','class'=>'input-block-level customer-search','placeholder'=>'Survey Id')); ?>
+				<?php echo form_open('customers/edit'); ?>
+				<?php echo form_input(array('name'=>'survey_id_search','class'=>'input-block-level customer-search','placeholder'=>'Survey Id')); ?>
 				<img src="<?php echo base_url('theme/img/question_mark.jpg');?>" height="40" width="40" />
 			</div>
 		</div>
@@ -23,7 +23,7 @@
 		</div>
 		<div class="row">
 			<div class="center">
-				<?php echo form_input(array('name'=>'customer_id','class'=>'input-block-level customer-search','placeholder'=>'Customer Id')); ?>
+				<?php echo form_input(array('name'=>'customer_id_search','class'=>'input-block-level customer-search','placeholder'=>'Customer Id')); ?>
 				<img src="<?php echo base_url('theme/img/question_mark.jpg');?>" height="40" width="40" />
 			</div>
 		</div>
