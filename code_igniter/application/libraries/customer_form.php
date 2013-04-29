@@ -171,7 +171,7 @@ class Customer_form {
 					return '';
 				}
 			}elseif($this->fieldInformation[$fieldName]['type'] == 'key' && $this->instance[$fieldName] == null){
-				return 'select';		
+				return 'null';		
 			}
 			return $this->instance[$fieldName];
 		}elseif(!is_null($this->formData)){
@@ -184,7 +184,7 @@ class Customer_form {
 		}
 		
 		if($this->fieldInformation[$fieldName]['type'] == 'key' || $this->fieldInformation[$fieldName]['type'] == 'dropdown'){
-			return 'select';
+			return 'null';
 		}elseif($this->fieldInformation[$fieldName]['type'] == 'many'){
 			return '[]';
 		}elseif($this->fieldInformation[$fieldName]['type'] == 'boolean'){
@@ -198,9 +198,9 @@ class Customer_form {
 		$this->displayError($fieldName);
 		if(is_null($array)){
 			
-			echo form_dropdown($fieldName,$this->arrays->getArray($fieldName),'select');//$this->defaultValue($fieldName));
+			echo form_dropdown($fieldName,$this->arrays->getArray($fieldName),$this->defaultValue($fieldName));
 		}else{
-			echo form_dropdown($fieldName,$array,'select');//$this->defaultValue($fieldName));	
+			echo form_dropdown($fieldName,$array,$this->defaultValue($fieldName));	
 		}
 	}
 	

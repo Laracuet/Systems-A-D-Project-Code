@@ -41,7 +41,7 @@ class Construct_arrays {
 		if(is_null($array)){
 			return array();
 		}elseif(!$manyToMany){
-			$array['select'] = '--Select--';
+			$array['null'] = '--Select--';
 		}
 		return $array;
 	}
